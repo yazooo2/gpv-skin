@@ -1,3 +1,4 @@
+
 .controller.custom {
     background: url(base.png); 
     height: 558px;
@@ -202,4 +203,68 @@ position: absolute;
 .custom .y{
     background-position: -168px 0;
     left: 50px;
+}
+/* === Rocket League Neon Style Enhancements === */
+
+.custom .trigger,
+.custom .bumper,
+.custom .stick,
+.custom .button,
+.custom .face {
+    filter: drop-shadow(0 0 4px #00ffff);
+}
+
+/* Sticks – glow in blue */
+.custom .stick.left, .custom .stick.right {
+    box-shadow: 0 0 8px 2px rgba(0, 153, 255, 0.8);
+}
+
+/* Triggers – purple glow */
+.custom .trigger {
+    box-shadow: 0 0 6px 1px rgba(185, 0, 255, 0.7);
+}
+
+/* Bumpers – green accent */
+.custom .bumper {
+    box-shadow: 0 0 6px 1px rgba(0, 255, 128, 0.7);
+}
+
+/* Dpad – orange glow */
+.custom .dpad {
+    box-shadow: 0 0 10px 2px rgba(255, 140, 0, 0.8);
+}
+
+/* Face buttons (A/B/X/Y) – different neon glows */
+.custom .a {
+    box-shadow: 0 0 8px #00ff88;
+}
+.custom .b {
+    box-shadow: 0 0 8px #ff0044;
+}
+.custom .x {
+    box-shadow: 0 0 8px #00bbff;
+}
+.custom .y {
+    box-shadow: 0 0 8px #ffff00;
+}
+
+/* ABXY container – subtle background glow */
+.custom .abxy {
+    background: radial-gradient(circle at center, rgba(0, 0, 0, 0.2), transparent);
+}
+
+/* Optionally add a light ambient background for the controller container */
+.controller.custom {
+    background: linear-gradient(145deg, #0f0c29, #302b63, #24243e);
+    background-size: 300% 300%;
+    animation: bgShift 20s ease infinite;
+    border-radius: 16px;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+}
+
+/* Background animation */
+@keyframes bgShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
