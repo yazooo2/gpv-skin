@@ -10,7 +10,7 @@
 
 /* État déconnecté */
 .custom.disconnected {
-    background: url(disconnected.png);
+    background: url(https://raw.githubusercontent.com/yazooo2/gpv-skin/main/disconnected.png);
 }
 
 /* TRIGGERS */
@@ -29,7 +29,7 @@
 .custom .trigger {
     width: 80px;
     height: 46px;
-    background: url(trigger.png);
+    background: url(https://raw.githubusercontent.com/yazooo2/gpv-skin/main/trigger.png);
     filter: drop-shadow(0 0 6px #00ccff);
 }
 
@@ -67,7 +67,7 @@
 .custom .bumper {
     width: 179px;
     height: 70px;
-    background: url(bumpers.png);
+    background: url(https://raw.githubusercontent.com/yazooo2/gpv-skin/main/bumpers.png);
     filter: drop-shadow(0 0 6px #00ccff);
 }
 
@@ -100,7 +100,7 @@
 
 .custom .stick {
     position: absolute;
-    background: url(stick.png);
+    background: url(https://raw.githubusercontent.com/yazooo2/gpv-skin/main/stick.png);
     height: 95px;
     width: 98px;
     filter: drop-shadow(0 0 10px #00f0ff);
@@ -134,7 +134,7 @@
 }
 
 .custom .face {
-    background: url(d-pad.png);
+    background: url(https://raw.githubusercontent.com/yazooo2/gpv-skin/main/d-pad.png);
     position: absolute;
     filter: drop-shadow(0 0 6px #00ccff);
 }
@@ -192,7 +192,7 @@
     position: absolute;
     width: 56px;
     height: 56px;
-    background: url(face.svgz);
+    background: url(https://raw.githubusercontent.com/yazooo2/gpv-skin/main/face.svgz);
     filter: drop-shadow(0 0 6px #00ccff);
     transition: 0.1s ease;
 }
