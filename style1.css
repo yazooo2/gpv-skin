@@ -4,144 +4,105 @@
     height: 558px;
     width: 866px;
     position: relative;
-    filter: drop-shadow(0 0 15px #000);
-    border-radius: 20px;
-    overflow: hidden;
+    filter: drop-shadow(0 0 20px #0ff8) drop-shadow(0 0 15px #f80a);
 }
 
-/* Triggers */
-.custom .triggers {
-    width: 581px;
-    height: 47px;
-    position: absolute;
-    left: 144px;
-    top: 9px;
-}
-
+/* TRIGGERS */
 .custom .trigger {
     width: 80px;
     height: 46px;
-    background: url(trigger.png) no-repeat;
-    background-size: cover;
-    transition: transform 0.2s ease;
-    border-radius: 8px;
+    background: url(trigger.png);
+    border-radius: 6px;
+    box-shadow: 0 0 8px #0ff8;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 .custom .trigger.pressed {
-    transform: translateY(2px) scale(0.95);
+    background-position: 80px;
+    margin-right: 2px;
+    transform: scale(0.95);
+    box-shadow: 0 0 12px #08f8;
 }
 
-/* Position */
-.custom .trigger.left { float: left; margin-left: 1px; }
-.custom .trigger.right { float: right; margin-right: 1px; transform: scaleX(-1); }
-
-/* Bumpers */
-.custom .bumpers {
-    position: absolute;
-    width: 618px;
-    height: 72px;
-    left: 125px;
-    top: 24px;
-}
+/* BUMPERS */
 .custom .bumper {
     width: 179px;
     height: 70px;
-    background: url(bumpers.png) no-repeat;
-    background-size: cover;
-    border-radius: 6px;
-    transition: transform 0.2s ease;
+    background: url(bumpers.png);
+    border-radius: 5px;
+    box-shadow: 0 0 8px #f80a;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 .custom .bumper.pressed {
+    background-position: 178px;
     transform: scale(0.95);
+    box-shadow: 0 0 12px #f80a;
 }
-.custom .bumper.left { float: left; }
-.custom .bumper.right { float: right; transform: scaleX(-1); }
 
-/* Sticks */
-.custom .sticks {
-    position: absolute;
-    top: 244px;
-    left: 240px;
-    width: 404px;
-    height: 96px;
-}
+/* STICKS */
 .custom .stick {
-    position: absolute;
-    width: 95px;
-    height: 95px;
-    background: radial-gradient(circle at center, #0a74da, #001f3f);
+    background: radial-gradient(circle at center, #00f0ff 20%, #001f3f 100%);
+    border: 3px solid #08f8;
+    box-shadow: inset 0 0 8px #00eaff, 0 0 10px #00f8ff;
     border-radius: 50%;
-    box-shadow: inset 0 0 5px #000, 0 0 10px #007bff;
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s;
 }
 .custom .stick.pressed.left,
 .custom .stick.pressed.right {
-    transform: scale(0.92);
+    transform: scale(0.95);
+    box-shadow: 0 0 16px #00eaff;
 }
-.custom .stick.left { left: 8px; }
-.custom .stick.right { right: 8px; }
 
-/* D-Pad */
-.custom .dpad {
-    position: absolute;
-    width: 127px;
-    height: 127px;
-    top: 110px;
-    left: 144px;
-}
+/* D-PAD */
 .custom .face {
-    background: url(d-pad.png) no-repeat;
-    background-size: cover;
-    position: absolute;
+    background: url(d-pad.png);
+    filter: drop-shadow(0 0 5px #0ff);
+    transition: transform 0.1s;
 }
-.custom .face.up,
-.custom .face.down { width: 42px; height: 49px; }
-.custom .face.left,
-.custom .face.right { width: 49px; height: 43px; }
-.custom .face.up    { top: 2px; left: 42px; background-position: 322px 0px; }
-.custom .face.down  { top: 79px; left: 42px; background-position: 228px 0; }
-.custom .face.left  { top: 41px; left: 0; background-position: 0 0; }
-.custom .face.right { top: 41px; right: 0; background-position: -92px 0; }
-
 .custom .face.pressed {
-    filter: brightness(1.5);
+    transform: scale(0.9);
+    filter: drop-shadow(0 0 12px #0ff8);
 }
 
-/* ABXY / boutons PS */
-.custom .abxy {
-    position: absolute;
-    width: 157px;
-    height: 158px;
-    top: 95px;
-    left: 587px;
-}
+/* ABXY */
 .custom .button {
-    position: absolute;
-    width: 56px;
-    height: 56px;
-    background: url(face.svgz) no-repeat;
-    background-size: auto;
-    transition: transform 0.2s ease;
+    background: url(face.svgz);
+    transition: transform 0.1s ease, filter 0.1s ease;
+    filter: drop-shadow(0 0 5px #ff7700);
 }
 .custom .button.pressed {
     transform: scale(0.9);
-    filter: drop-shadow(0 0 5px #fff);
+    filter: drop-shadow(0 0 10px #ff7700);
 }
-.custom .a  { background-position: 0 0;      top: 105px; left: 50px; }
-.custom .b  { background-position: -56px 0;  top: 50px; right: 0px; }
-.custom .x  { background-position: -113px 0; top: 50px; left: 0; }
-.custom .y  { background-position: -168px 0; left: 50px; top: 0px; }
 
-/* Bonus: PS Logo au centre */
-.custom .ps-button {
-    position: absolute;
-    width: 48px;
-    height: 48px;
-    background: url(ps.png) no-repeat center;
-    background-size: contain;
-    top: 245px;
-    left: 405px;
+/* COULEUR DYNAMIQUE PAR BOUTON */
+.custom .a {
+    background-position: 0 0;
+    top: 105px;
+    left: 50px;
+    filter: drop-shadow(0 0 5px #007bff);
 }
-.custom .ps-button.pressed {
-    transform: scale(0.95);
-    filter: brightness(1.3);
+.custom .b {
+    background-position: -56px 0;
+    top: 50px;
+    right: 0px;
+    filter: drop-shadow(0 0 5px #ff5733);
+}
+.custom .x {
+    background-position: -113px 0;
+    top: 50px;
+    left: 0px;
+    filter: drop-shadow(0 0 5px #00e1ff);
+}
+.custom .y {
+    background-position: -168px 0;
+    left: 50px;
+    top: 0px;
+    filter: drop-shadow(0 0 5px #ffc300);
+}
+
+/* AJOUT GLOW GLOBAL */
+.custom .dpad,
+.custom .sticks,
+.custom .abxy {
+    filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.3));
 }
