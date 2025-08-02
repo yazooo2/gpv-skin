@@ -2,7 +2,7 @@
 
 /* Corps de la manette */
 .controller.custom {
-    background: url(base.png);
+    background: url(https://raw.githubusercontent.com/yazooo2/gpv-skin/main/base.png);
     height: 558px;
     width: 866px;
     filter: drop-shadow(0 0 12px #00f0ff);
